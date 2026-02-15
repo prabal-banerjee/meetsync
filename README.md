@@ -47,7 +47,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Tech Stack
 
-- Next.js 15
+- Next.js 16
 - React 19
 - TypeScript
 - Tailwind CSS
@@ -61,4 +61,4 @@ Your calendar data is fetched directly to your browser and is never stored on an
 
 ## License
 
-MIT
+This project is open source and available under the [MIT License](LICENSE).

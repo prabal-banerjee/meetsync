@@ -491,6 +491,15 @@ export default function CalendarOverlapDemo() {
         <p className="text-center text-slate-500 text-sm mt-6">
           Your calendar data stays private and is never stored.
         </p>
+        <div className="flex items-center justify-center gap-4 mt-4 text-sm">
+          <a href="/terms" className="text-slate-500 hover:text-slate-700 transition-colors">
+            Terms of Service
+          </a>
+          <span className="text-slate-300">|</span>
+          <a href="/privacy" className="text-slate-500 hover:text-slate-700 transition-colors">
+            Privacy Policy
+          </a>
+        </div>
       </div>
     </div>
   );

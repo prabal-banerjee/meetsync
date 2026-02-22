@@ -29,7 +29,7 @@ export default function PrivacyPage() {
     publisher: {
       '@type': 'Organization',
       name: 'MeetSync',
-      email: 'mail.prabal@gmail.com',
+      email: 'contact[at]prabalbanerjee[dot]xyz',
     },
   };
 
@@ -214,7 +214,7 @@ export default function PrivacyPage() {
               If you have any questions or concerns about this Privacy Policy or our data practices, 
               please contact us at:
               <br />
-              <span className="text-blue-600">mail[dot]prabal[at]gmail[dot]com</span>
+              <span className="text-blue-600">contact[at]prabalbanerjee[dot]xyz</span>
             </p>
           </section>
         </div>

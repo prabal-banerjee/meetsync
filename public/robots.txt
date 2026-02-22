@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to index all pages
+Disallow:
+
+# Sitemap location
+Sitemap: https://meetsync.vercel.app/sitemap.xml

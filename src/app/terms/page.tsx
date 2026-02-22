@@ -1,20 +1,55 @@
-export const metadata = {
-  title: 'Terms of Service - MeetSync',
-  description: 'Terms of Service for MeetSync application',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Terms of Service for MeetSync - the calendar scheduling tool that helps you compare Calendly availability with Google Calendar.',
+  keywords: ['terms of service', 'terms and conditions', 'legal', 'MeetSync', 'calendar scheduling'],
+  alternates: {
+    canonical: 'https://meetsync.vercel.app/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service | MeetSync',
+    description: 'Terms of Service for MeetSync - the calendar scheduling tool.',
+    url: 'https://meetsync.vercel.app/terms',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Terms of Service - MeetSync',
+    description: 'Terms of Service for MeetSync application',
+    url: 'https://meetsync.vercel.app/terms',
+    dateModified: '2026-02-22',
+    publisher: {
+      '@type': 'Organization',
+      name: 'MeetSync',
+      url: 'https://meetsync.vercel.app/contact',
+    },
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 py-12 px-4">
-      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Terms of Service</h1>
-        <p className="text-gray-500 mb-8">Last Updated: February 22, 2026</p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <article className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-12">
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Terms of Service</h1>
+          <p className="text-gray-500">Last Updated: February 22, 2026</p>
+        </header>
 
         <div className="prose prose-gray max-w-none">
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              By accessing or using the MeetSync application ("Service"), you agree to be bound by these Terms of Service. 
+              By accessing or using the MeetSync application (&quot;Service&quot;), you agree to be bound by these Terms of Service. 
               If you do not agree to these terms, please do not use the Service.
             </p>
           </section>
@@ -59,7 +94,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">5. Data Usage and Privacy</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Your use of the Service is also governed by our Privacy Policy. By using the Service, 
+              Your use of the Service is also governed by our <a href="/privacy" className="text-blue-600 hover:text-blue-800">Privacy Policy</a>. By using the Service, 
               you consent to the collection, use, and sharing of your information as described in the Privacy Policy.
             </p>
           </section>
@@ -76,7 +111,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">7. Disclaimer of Warranties</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The Service is provided "as is" and "as available" without warranties of any kind, 
+              The Service is provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, 
               either express or implied. We do not guarantee that the Service will be uninterrupted, 
               timely, secure, or error-free.
             </p>
@@ -111,15 +146,14 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">11. Contact Information</h2>
             <p className="text-gray-700 leading-relaxed">
-              If you have any questions about these Terms of Service, please contact us at:
-              <br />
-              <a href="mailto:mail.prabal@gmail.com" className="text-blue-600 hover:text-blue-800">
-                support@calendaroverlapfinder.com
-              </a>
+              If you have any questions about these Terms of Service, please{' '}
+              <a href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
+                contact us through our form
+              </a>.
             </p>
           </section>
         </div>
-      </div>
+      </article>
     </main>
   );
 }

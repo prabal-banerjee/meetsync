@@ -1,20 +1,55 @@
-export const metadata = {
-  title: 'Privacy Policy - MeetSync',
-  description: 'Privacy Policy for MeetSync application',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Privacy Policy for MeetSync - learn how we protect your data when comparing Calendly with Google Calendar.',
+  keywords: ['privacy policy', 'data protection', 'GDPR', 'Google Calendar privacy', 'MeetSync privacy', 'calendar data'],
+  alternates: {
+    canonical: 'https://meetsync.vercel.app/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | MeetSync',
+    description: 'Privacy Policy for MeetSync - learn how we protect your data.',
+    url: 'https://meetsync.vercel.app/privacy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Privacy Policy - MeetSync',
+    description: 'Privacy Policy for MeetSync application explaining data collection, usage, and protection.',
+    url: 'https://meetsync.vercel.app/privacy',
+    dateModified: '2026-02-22',
+    publisher: {
+      '@type': 'Organization',
+      name: 'MeetSync',
+      url: 'https://meetsync.vercel.app/contact',
+    },
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 py-12 px-4">
-      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
-        <p className="text-gray-500 mb-8">Last Updated: February 22, 2026</p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <article className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-12">
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+          <p className="text-gray-500">Last Updated: February 22, 2026</p>
+        </header>
 
         <div className="prose prose-gray max-w-none">
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              This Privacy Policy explains how MeetSync ("we", "us", or "our") 
+              This Privacy Policy explains how MeetSync (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) 
               collects, uses, stores, and protects your information when you use our Service. 
               We are committed to protecting your privacy and handling your data responsibly.
             </p>
@@ -115,13 +150,13 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
               <li>
-                <strong>Google Calendar:</strong> Subject to Google's 
+                <strong>Google Calendar:</strong> Subject to Google&apos;s 
                 <a href="https://policies.google.com/privacy" className="text-blue-600 hover:text-blue-800 ml-1" target="_blank" rel="noopener noreferrer">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Calendly:</strong> Subject to Calendly's 
+                <strong>Calendly:</strong> Subject to Calendly&apos;s 
                 <a href="https://calendly.com/privacy" className="text-blue-600 hover:text-blue-800 ml-1" target="_blank" rel="noopener noreferrer">
                   Privacy Policy
                 </a>
@@ -157,7 +192,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">10. Children's Privacy</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">10. Children&apos;s Privacy</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               The Service is not intended for use by children under the age of 13. We do not knowingly 
               collect personal information from children under 13. If we become aware that we have 
@@ -169,7 +204,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">11. Changes to This Privacy Policy</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We may update this Privacy Policy from time to time. Changes will be posted on this page 
-              with an updated "Last Updated" date. We encourage you to review this policy periodically.
+              with an updated &quot;Last Updated&quot; date. We encourage you to review this policy periodically.
             </p>
           </section>
 
@@ -177,15 +212,14 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">12. Contact Us</h2>
             <p className="text-gray-700 leading-relaxed">
               If you have any questions or concerns about this Privacy Policy or our data practices, 
-              please contact us at:
-              <br />
-              <a href="mailto:mail.prabal@gmail.com" className="text-blue-600 hover:text-blue-800">
-                support@calendaroverlapfinder.com
-              </a>
+              please{' '}
+              <a href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
+                contact us through our form
+              </a>.
             </p>
           </section>
         </div>
-      </div>
+      </article>
     </main>
   );
 }

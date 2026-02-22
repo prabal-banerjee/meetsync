@@ -5,4 +5,4 @@ Allow: /
 Disallow:
 
 # Sitemap location
-Sitemap: https://meetsync-website.vercel.app/sitemap.xml
+Sitemap: https://meetsync.prabalbanerjee.xyz/sitemap.xml

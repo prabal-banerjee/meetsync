@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description: 'Privacy Policy for MeetSync - learn how we protect your data when comparing Calendly with Google Calendar.',
   keywords: ['privacy policy', 'data protection', 'GDPR', 'Google Calendar privacy', 'MeetSync privacy', 'calendar data'],
   alternates: {
-    canonical: 'https://meetsync-website.vercel.app/privacy',
+    canonical: 'https://meetsync.prabalbanerjee.xyz/privacy',
   },
   openGraph: {
     title: 'Privacy Policy | MeetSync',
     description: 'Privacy Policy for MeetSync - learn how we protect your data.',
-    url: 'https://meetsync.vercel.app/privacy',
+    url: 'https://meetsync.prabalbanerjee.xyz/privacy',
   },
   robots: {
     index: true,
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
     '@type': 'WebPage',
     name: 'Privacy Policy - MeetSync',
     description: 'Privacy Policy for MeetSync application explaining data collection, usage, and protection.',
-    url: 'https://meetsync.vercel.app/privacy',
+    url: 'https://meetsync.prabalbanerjee.xyz/privacy',
     dateModified: '2026-02-22',
     publisher: {
       '@type': 'Organization',

@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description: 'Terms of Service for MeetSync - the calendar scheduling tool that helps you compare Calendly availability with Google Calendar.',
   keywords: ['terms of service', 'terms and conditions', 'legal', 'MeetSync', 'calendar scheduling'],
   alternates: {
-    canonical: 'https://meetsync-website.vercel.app/terms',
+    canonical: 'https://meetsync.prabalbanerjee.xyz/terms',
   },
   openGraph: {
     title: 'Terms of Service | MeetSync',
     description: 'Terms of Service for MeetSync - the calendar scheduling tool.',
-    url: 'https://meetsync.vercel.app/terms',
+    url: 'https://meetsync.prabalbanerjee.xyz/terms',
   },
   robots: {
     index: true,
@@ -24,7 +24,7 @@ export default function TermsPage() {
     '@type': 'WebPage',
     name: 'Terms of Service - MeetSync',
     description: 'Terms of Service for MeetSync application',
-    url: 'https://meetsync.vercel.app/terms',
+    url: 'https://meetsync.prabalbanerjee.xyz/terms',
     dateModified: '2026-02-22',
     publisher: {
       '@type': 'Organization',

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Privacy Policy for MeetSync - learn how we protect your data when comparing Calendly with Google Calendar.',
   keywords: ['privacy policy', 'data protection', 'GDPR', 'Google Calendar privacy', 'MeetSync privacy', 'calendar data'],
   alternates: {
-    canonical: 'https://meetsync.vercel.app/privacy',
+    canonical: 'https://meetsync-website.vercel.app/privacy',
   },
   openGraph: {
     title: 'Privacy Policy | MeetSync',
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
     publisher: {
       '@type': 'Organization',
       name: 'MeetSync',
-      url: 'https://meetsync.vercel.app/contact',
+      email: 'mail.prabal@gmail.com',
     },
   };
 
@@ -212,10 +212,9 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">12. Contact Us</h2>
             <p className="text-gray-700 leading-relaxed">
               If you have any questions or concerns about this Privacy Policy or our data practices, 
-              please{' '}
-              <a href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
-                contact us through our form
-              </a>.
+              please contact us at:
+              <br />
+              <span className="text-blue-600">mail[dot]prabal[at]gmail[dot]com</span>
             </p>
           </section>
         </div>

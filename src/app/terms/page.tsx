@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Terms of Service for MeetSync - the calendar scheduling tool that helps you compare Calendly availability with Google Calendar.',
   keywords: ['terms of service', 'terms and conditions', 'legal', 'MeetSync', 'calendar scheduling'],
   alternates: {
-    canonical: 'https://meetsync.vercel.app/terms',
+    canonical: 'https://meetsync-website.vercel.app/terms',
   },
   openGraph: {
     title: 'Terms of Service | MeetSync',
@@ -29,7 +29,7 @@ export default function TermsPage() {
     publisher: {
       '@type': 'Organization',
       name: 'MeetSync',
-      url: 'https://meetsync.vercel.app/contact',
+      email: 'mail.prabal@gmail.com',
     },
   };
 
@@ -146,10 +146,9 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">11. Contact Information</h2>
             <p className="text-gray-700 leading-relaxed">
-              If you have any questions about these Terms of Service, please{' '}
-              <a href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
-                contact us through our form
-              </a>.
+              If you have any questions about these Terms of Service, please contact us at:
+              <br />
+              <span className="text-blue-600">mail[dot]prabal[at]gmail[dot]com</span>
             </p>
           </section>
         </div>

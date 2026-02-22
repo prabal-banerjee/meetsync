@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://meetsync.vercel.app",
+    url: "https://meetsync-website.vercel.app",
     siteName: "MeetSync",
     title: "MeetSync - Compare Calendly with Google Calendar",
     description: "Find the perfect meeting time by comparing Calendly availability with your Google Calendar.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description: "Find the perfect meeting time by comparing Calendly availability with your Google Calendar.",
   },
   alternates: {
-    canonical: "https://meetsync.vercel.app",
+    canonical: "https://meetsync-website.vercel.app",
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,

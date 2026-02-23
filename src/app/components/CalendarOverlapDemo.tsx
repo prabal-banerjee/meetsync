@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarDays, Link2, ChevronLeft, ChevronRight, LogIn, Loader2, CheckCircle2, XCircle } from "lucide-react";
+import Image from "next/image";
 
 interface CalendarEvent {
   start: { dateTime?: string; date?: string };
@@ -162,9 +163,18 @@ export default function CalendarOverlapDemo() {
             >
               <ChevronLeft className="w-4 h-4 mr-1" /> Back
             </Button>
-            <div>
-              <h1 className="text-xl font-bold text-slate-900">MeetSync</h1>
-              <p className="text-sm text-slate-500">Compare availability side-by-side</p>
+            <div className="flex items-center gap-3">
+              <Image 
+                src="/meetsync-logo.png" 
+                alt="MeetSync" 
+                width={40} 
+                height={40} 
+                className="rounded-lg"
+              />
+              <div>
+                <div className="app-name text-xl font-bold text-slate-900">MeetSync</div>
+                <p className="text-sm text-slate-500">Compare availability side-by-side</p>
+              </div>
             </div>
           </div>
           
@@ -365,10 +375,14 @@ export default function CalendarOverlapDemo() {
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-white/20 p-3 rounded-xl">
-                <CalendarDays className="w-8 h-8" />
-              </div>
-              <h1 className="text-2xl font-bold">MeetSync</h1>
+              <Image 
+                src="/meetsync-logo.png" 
+                alt="MeetSync" 
+                width={48} 
+                height={48} 
+                className="rounded-xl"
+              />
+              <div className="app-name text-2xl font-bold">MeetSync</div>
             </div>
             <p className="text-blue-100">
               Find the perfect meeting time by comparing Calendly availability with your Google Calendar.
